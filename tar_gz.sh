@@ -24,7 +24,6 @@ read answer
 if [ $answer = "Y" ]
 then
         for dir in "${directory_lists[@]}"; do
-                tar -zcvf $dir.tar.gz $dir
-                rm -rf $dir
+                tar -zcvf $dir.tar.gz $dir && rm -rf $dir
         done
 fi
